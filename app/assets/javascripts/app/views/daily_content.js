@@ -1,8 +1,6 @@
-define(function(require) {
-  var $ = require('jquery'),
-      _ = require('underscore'),
-      Backbone = require('backbone'),
-      Tmpl_DailyContent = require('hbs!app/templates/daily_content');
+define(
+  ['jquery','underscore','backbone','hbs!app/templates/daily_content'],
+  function($,_,Backbone, Tmpl_DailyContent) {
 
   var Views_DailyContent = Backbone.View.extend({
     template: Tmpl_DailyContent,

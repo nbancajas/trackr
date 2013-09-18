@@ -1,14 +1,14 @@
-define(function(require) {
-  var $ = require('jquery');
-  var _ = require('underscore');
-  var Backbone = require('backbone');
+define(
+  ['jquery','underscore','backbone', 'hbs!app/templates/header'],
+  function($,_,Backbone, Tmpl_Header) {
 
-  var Views_Header = Backbone.View.extend({
+  var Views_Headerr = Backbone.View.extend({
+    template: Tmpl_Header,
     render: function() {
-      this.$el.html('<div>Header View here</div>');
+      this.$el.html(this.template());
       return this;
     }
   });
 
-  return Views_Header;
+  return Views_Headerr;
 });

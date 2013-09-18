@@ -7,7 +7,7 @@ header
     span Login
     form id='login' action='users/sign_in' method='post'
       /input name='utf8' type='hidden' value="&#x2713;"
-      = token_tag 'authenticity_token'
+      = token_tag nil
       input type='email' name='user[email]' placeholder='email'
       input type='password' name='user[password]' placeholder='password'
       input id='user_remember_me' type='checkbox' name='user[remember_me]'
